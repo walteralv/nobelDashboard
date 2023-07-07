@@ -15,6 +15,7 @@ app = dash.Dash(
 )
 app.scripts.config.serve_locally = True
 
+server = app.server
 
 df_Alumnos = pd.DataFrame(list(dbAlumnos.find({}))).set_index("_id")
 df_Descuento = pd.DataFrame(list(dbDescuento.find({}))).set_index("_id")
